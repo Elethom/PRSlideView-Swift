@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93FE23E81A739FE900B92184 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE23E71A739FE900B92184 /* AppDelegate.swift */; };
+		93FE23EA1A739FE900B92184 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE23E91A739FE900B92184 /* ViewController.swift */; };
+		93FE23EF1A739FE900B92184 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93FE23EE1A739FE900B92184 /* Images.xcassets */; };
+		93FE23F21A739FE900B92184 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93FE23F01A739FE900B92184 /* LaunchScreen.xib */; };
+		93FE23FE1A739FE900B92184 /* PRSlideViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE23FD1A739FE900B92184 /* PRSlideViewDemoTests.swift */; };
+		93FE24091A73A05300B92184 /* PRSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE24081A73A05300B92184 /* PRSlideView.swift */; };
+		93FE240D1A73A2E900B92184 /* PRSlideViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE240C1A73A2E900B92184 /* PRSlideViewPage.swift */; };
+		93FE24101A7541F200B92184 /* PRAlbumPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE240F1A7541F200B92184 /* PRAlbumPage.swift */; };
+		93FE241B1A754DFB00B92184 /* D-Sides (Special Edition).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93FE24131A754DFB00B92184 /* D-Sides (Special Edition).jpg */; };
+		93FE241C1A754DFB00B92184 /* Demon Days.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93FE24141A754DFB00B92184 /* Demon Days.jpg */; };
+		93FE241D1A754DFB00B92184 /* G-Sides.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93FE24151A754DFB00B92184 /* G-Sides.jpg */; };
+		93FE241E1A754DFB00B92184 /* Gorillaz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93FE24161A754DFB00B92184 /* Gorillaz.jpg */; };
+		93FE241F1A754DFB00B92184 /* Laika Come Home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93FE24171A754DFB00B92184 /* Laika Come Home.jpg */; };
+		93FE24201A754DFB00B92184 /* Plastic Beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93FE24181A754DFB00B92184 /* Plastic Beach.jpg */; };
+		93FE24211A754DFB00B92184 /* The Fall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93FE24191A754DFB00B92184 /* The Fall.jpg */; };
+		93FE24221A754DFB00B92184 /* The Singles Collection 2001-2011.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93FE241A1A754DFB00B92184 /* The Singles Collection 2001-2011.jpg */; };
+		93FE24271A762EC200B92184 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93FE24251A762EC200B92184 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93FE23F81A739FE900B92184 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93FE23DA1A739FE900B92184 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93FE23E11A739FE900B92184;
+			remoteInfo = PRSlideViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		93FE23E21A739FE900B92184 /* PRSlideViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PRSlideViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93FE23E61A739FE900B92184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93FE23E71A739FE900B92184 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93FE23E91A739FE900B92184 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93FE23EE1A739FE900B92184 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		93FE23F11A739FE900B92184 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		93FE23F71A739FE900B92184 /* PRSlideViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PRSlideViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93FE23FC1A739FE900B92184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93FE23FD1A739FE900B92184 /* PRSlideViewDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRSlideViewDemoTests.swift; sourceTree = "<group>"; };
+		93FE24081A73A05300B92184 /* PRSlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRSlideView.swift; sourceTree = "<group>"; };
+		93FE240C1A73A2E900B92184 /* PRSlideViewPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRSlideViewPage.swift; sourceTree = "<group>"; };
+		93FE240F1A7541F200B92184 /* PRAlbumPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRAlbumPage.swift; sourceTree = "<group>"; };
+		93FE24131A754DFB00B92184 /* D-Sides (Special Edition).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "D-Sides (Special Edition).jpg"; sourceTree = "<group>"; };
+		93FE24141A754DFB00B92184 /* Demon Days.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Demon Days.jpg"; sourceTree = "<group>"; };
+		93FE24151A754DFB00B92184 /* G-Sides.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "G-Sides.jpg"; sourceTree = "<group>"; };
+		93FE24161A754DFB00B92184 /* Gorillaz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gorillaz.jpg; sourceTree = "<group>"; };
+		93FE24171A754DFB00B92184 /* Laika Come Home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Laika Come Home.jpg"; sourceTree = "<group>"; };
+		93FE24181A754DFB00B92184 /* Plastic Beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Plastic Beach.jpg"; sourceTree = "<group>"; };
+		93FE24191A754DFB00B92184 /* The Fall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Fall.jpg"; sourceTree = "<group>"; };
+		93FE241A1A754DFB00B92184 /* The Singles Collection 2001-2011.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Singles Collection 2001-2011.jpg"; sourceTree = "<group>"; };
+		93FE24261A762EC200B92184 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93FE23DF1A739FE900B92184 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93FE23F41A739FE900B92184 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93FE23D91A739FE900B92184 = {
+			isa = PBXGroup;
+			children = (
+				93FE24071A73A01800B92184 /* Classes */,
+				93FE23E41A739FE900B92184 /* PRSlideViewDemo */,
+				93FE23FA1A739FE900B92184 /* PRSlideViewDemoTests */,
+				93FE23E31A739FE900B92184 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93FE23E31A739FE900B92184 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93FE23E21A739FE900B92184 /* PRSlideViewDemo.app */,
+				93FE23F71A739FE900B92184 /* PRSlideViewDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93FE23E41A739FE900B92184 /* PRSlideViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				93FE240F1A7541F200B92184 /* PRAlbumPage.swift */,
+				93FE23E71A739FE900B92184 /* AppDelegate.swift */,
+				93FE23E91A739FE900B92184 /* ViewController.swift */,
+				93FE23EE1A739FE900B92184 /* Images.xcassets */,
+				93FE24251A762EC200B92184 /* Main.storyboard */,
+				93FE23F01A739FE900B92184 /* LaunchScreen.xib */,
+				93FE24121A754DFB00B92184 /* Resources */,
+				93FE23E51A739FE900B92184 /* Supporting Files */,
+			);
+			path = PRSlideViewDemo;
+			sourceTree = "<group>";
+		};
+		93FE23E51A739FE900B92184 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93FE23E61A739FE900B92184 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93FE23FA1A739FE900B92184 /* PRSlideViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				93FE23FD1A739FE900B92184 /* PRSlideViewDemoTests.swift */,
+				93FE23FB1A739FE900B92184 /* Supporting Files */,
+			);
+			path = PRSlideViewDemoTests;
+			sourceTree = "<group>";
+		};
+		93FE23FB1A739FE900B92184 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93FE23FC1A739FE900B92184 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93FE24071A73A01800B92184 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				93FE24081A73A05300B92184 /* PRSlideView.swift */,
+				93FE240C1A73A2E900B92184 /* PRSlideViewPage.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		93FE24121A754DFB00B92184 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93FE24131A754DFB00B92184 /* D-Sides (Special Edition).jpg */,
+				93FE24141A754DFB00B92184 /* Demon Days.jpg */,
+				93FE24151A754DFB00B92184 /* G-Sides.jpg */,
+				93FE24161A754DFB00B92184 /* Gorillaz.jpg */,
+				93FE24171A754DFB00B92184 /* Laika Come Home.jpg */,
+				93FE24181A754DFB00B92184 /* Plastic Beach.jpg */,
+				93FE24191A754DFB00B92184 /* The Fall.jpg */,
+				93FE241A1A754DFB00B92184 /* The Singles Collection 2001-2011.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93FE23E11A739FE900B92184 /* PRSlideViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93FE24011A739FE900B92184 /* Build configuration list for PBXNativeTarget "PRSlideViewDemo" */;
+			buildPhases = (
+				93FE23DE1A739FE900B92184 /* Sources */,
+				93FE23DF1A739FE900B92184 /* Frameworks */,
+				93FE23E01A739FE900B92184 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PRSlideViewDemo;
+			productName = PRSlideViewDemo;
+			productReference = 93FE23E21A739FE900B92184 /* PRSlideViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		93FE23F61A739FE900B92184 /* PRSlideViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93FE24041A739FE900B92184 /* Build configuration list for PBXNativeTarget "PRSlideViewDemoTests" */;
+			buildPhases = (
+				93FE23F31A739FE900B92184 /* Sources */,
+				93FE23F41A739FE900B92184 /* Frameworks */,
+				93FE23F51A739FE900B92184 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93FE23F91A739FE900B92184 /* PBXTargetDependency */,
+			);
+			name = PRSlideViewDemoTests;
+			productName = PRSlideViewDemoTests;
+			productReference = 93FE23F71A739FE900B92184 /* PRSlideViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93FE23DA1A739FE900B92184 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Project Rhinestone";
+				TargetAttributes = {
+					93FE23E11A739FE900B92184 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					93FE23F61A739FE900B92184 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 93FE23E11A739FE900B92184;
+					};
+				};
+			};
+			buildConfigurationList = 93FE23DD1A739FE900B92184 /* Build configuration list for PBXProject "PRSlideViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93FE23D91A739FE900B92184;
+			productRefGroup = 93FE23E31A739FE900B92184 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93FE23E11A739FE900B92184 /* PRSlideViewDemo */,
+				93FE23F61A739FE900B92184 /* PRSlideViewDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93FE23E01A739FE900B92184 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93FE241D1A754DFB00B92184 /* G-Sides.jpg in Resources */,
+				93FE241F1A754DFB00B92184 /* Laika Come Home.jpg in Resources */,
+				93FE24211A754DFB00B92184 /* The Fall.jpg in Resources */,
+				93FE24201A754DFB00B92184 /* Plastic Beach.jpg in Resources */,
+				93FE241C1A754DFB00B92184 /* Demon Days.jpg in Resources */,
+				93FE24271A762EC200B92184 /* Main.storyboard in Resources */,
+				93FE23F21A739FE900B92184 /* LaunchScreen.xib in Resources */,
+				93FE24221A754DFB00B92184 /* The Singles Collection 2001-2011.jpg in Resources */,
+				93FE241E1A754DFB00B92184 /* Gorillaz.jpg in Resources */,
+				93FE23EF1A739FE900B92184 /* Images.xcassets in Resources */,
+				93FE241B1A754DFB00B92184 /* D-Sides (Special Edition).jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93FE23F51A739FE900B92184 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93FE23DE1A739FE900B92184 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93FE24091A73A05300B92184 /* PRSlideView.swift in Sources */,
+				93FE24101A7541F200B92184 /* PRAlbumPage.swift in Sources */,
+				93FE23EA1A739FE900B92184 /* ViewController.swift in Sources */,
+				93FE23E81A739FE900B92184 /* AppDelegate.swift in Sources */,
+				93FE240D1A73A2E900B92184 /* PRSlideViewPage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93FE23F31A739FE900B92184 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93FE23FE1A739FE900B92184 /* PRSlideViewDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93FE23F91A739FE900B92184 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93FE23E11A739FE900B92184 /* PRSlideViewDemo */;
+			targetProxy = 93FE23F81A739FE900B92184 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		93FE23F01A739FE900B92184 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93FE23F11A739FE900B92184 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		93FE24251A762EC200B92184 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93FE24261A762EC200B92184 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93FE23FF1A739FE900B92184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93FE24001A739FE900B92184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93FE24021A739FE900B92184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PRSlideViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		93FE24031A739FE900B92184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PRSlideViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		93FE24051A739FE900B92184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PRSlideViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PRSlideViewDemo.app/PRSlideViewDemo";
+			};
+			name = Debug;
+		};
+		93FE24061A739FE900B92184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PRSlideViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PRSlideViewDemo.app/PRSlideViewDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93FE23DD1A739FE900B92184 /* Build configuration list for PBXProject "PRSlideViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93FE23FF1A739FE900B92184 /* Debug */,
+				93FE24001A739FE900B92184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93FE24011A739FE900B92184 /* Build configuration list for PBXNativeTarget "PRSlideViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93FE24021A739FE900B92184 /* Debug */,
+				93FE24031A739FE900B92184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		93FE24041A739FE900B92184 /* Build configuration list for PBXNativeTarget "PRSlideViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93FE24051A739FE900B92184 /* Debug */,
+				93FE24061A739FE900B92184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93FE23DA1A739FE900B92184 /* Project object */;
+}
