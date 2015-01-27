@@ -1,5 +1,7 @@
 # PRSlideView-Swift
 
+[![Cocoapods](https://cocoapod-badges.herokuapp.com/v/PRSlideView-Swift/badge.png)](http://cocoapods.org/?q=PRSlideView-Swift)
+
 This is the Swift language version of [PRSlideView](https://github.com/Elethom/PRSlideView).
 
 ## General
@@ -7,6 +9,16 @@ This is the Swift language version of [PRSlideView](https://github.com/Elethom/P
 Slide view with gracefully written UIKit-like methods, delegate and data source protocol. Infinite scrolling supported.
 
 Note: Auto layout not supported due to the special behaviours of `UIScrollView`. Please use autoresizing mask instead or wrap it with a container view.
+
+## Installation
+
+### With CocoaPods
+
+In your `Podfile`:
+
+```
+pod 'PRSlideView-Swift'
+```
 
 ## Usage
 
