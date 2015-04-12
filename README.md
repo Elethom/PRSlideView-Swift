@@ -117,6 +117,7 @@ You can support me by:
 
 ## Contact
 
+* [About](https://about.me/elethom)
 * [Telegram](https://telegram.org): [@elethom](http://telegram.me/elethom)
 * [Email](mailto:elethomhunter@gmail.com)
 * [Twitter](https://twitter.com/elethomhunter)
