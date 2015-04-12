@@ -35,9 +35,6 @@ public class PRSlideView: UIScrollView {
     
     // MARK: Public properties
     
-    public func setDelegate(delegate: PRSlideViewDelegate?) {
-        super.delegate = delegate
-    }
     public weak var dataSource: PRSlideViewDataSource?
     public var scrollDirection: PRSlideViewScrollDirection = .Horizontal
     public var infiniteScrollingEnabled: Bool = false
