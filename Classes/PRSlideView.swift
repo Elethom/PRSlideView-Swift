@@ -128,8 +128,14 @@ public class PRSlideView: UIScrollView {
         let frame: CGRect = self.rectForPageAtIndex(index)
         let reusablePage: PRSlideViewPage = {
             var reusablePagesForIdentifier = self.reusablePages[identifier]
-            let reusablePage: PRSlideViewPage? = (reusablePagesForIdentifier != nil && !reusablePagesForIdentifier!.isEmpty) ? reusablePagesForIdentifier?.removeLast() : nil
-            reusablePage?.frame = frame
+            let reusablePage: PRSlideViewPage?
+            if reusablePagesForIdentifier != nil && !reusablePagesForIdentifier!.isEmpty {
+                reusablePage = reusablePagesForIdentifier!.removeLast()
+                reusablePage?.frame = frame
+                self.reusablePages[identifier] = reusablePagesForIdentifier!
+            } else {
+                reusablePage = nil
+            }
             return reusablePage
         }() ?? self.classForIdentifiers[identifier]!(frame: frame, identifier: identifier)
         reusablePage.pageIndex = index
@@ -249,10 +255,11 @@ public class PRSlideView: UIScrollView {
                 let pageIdentifier: String = page.pageIdentifier
                 var pages: [PRSlideViewPage] = self.reusablePages[pageIdentifier] ?? {
                     let pages: [PRSlideViewPage] = [PRSlideViewPage]()
-                    self.reusablePages[pageIdentifier] = pages
                     return pages
                 }()
                 pages.append(page)
+                self.reusablePages[pageIdentifier] = pages
+                
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     page.removeFromSuperview()
                 })
