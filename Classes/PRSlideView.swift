@@ -270,9 +270,8 @@ public class PRSlideView: UIScrollView {
     }
     
     func didScrollToPageAtIndex(index: Int) {
-        let delegate = self.delegate as? PRSlideViewDelegate
-        if delegate?.respondsToSelector("slideView:didScrollToPageAtIndex:") != nil {
-            delegate?.slideView!(self, didScrollToPageAtIndex: self.indexForActualIndex(index))
+        if let delegate = self.delegate as? PRSlideViewDelegate {
+            delegate.slideView?(self, didScrollToPageAtIndex: self.indexForActualIndex(index))
         }
         let offset: Int = index == 0 ? 1 : 0
         let currentRange: NSRange = NSMakeRange(index + offset - 1, 3 - offset)
@@ -352,9 +351,8 @@ public class PRSlideView: UIScrollView {
     // MARK: Actions
     
     func pageClicked(page: PRSlideViewPage) {
-        if let delegate = self.delegate as? PRSlideViewDelegate
-        if delegate?.respondsToSelector("slideView:didClickPageAtIndex:") != nil {
-            delegate?.slideView!(self, didClickPageAtIndex: self.indexForActualIndex(page.pageIndex!))
+        if let delegate = self.delegate as? PRSlideViewDelegate{
+            delegate.slideView?(self, didClickPageAtIndex: self.indexForActualIndex(page.pageIndex!))
         }
     }
     
