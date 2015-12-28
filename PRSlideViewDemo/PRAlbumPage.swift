@@ -18,12 +18,12 @@ public class PRAlbumPage: PRSlideViewPage {
         
         let coverImageView = self.coverImageView
         coverImageView.frame = self.bounds
-        coverImageView.autoresizingMask = (.FlexibleWidth | .FlexibleHeight)
+        coverImageView.autoresizingMask = ([.FlexibleWidth, .FlexibleHeight])
         coverImageView.contentMode = .ScaleAspectFit
         self.addSubview(coverImageView)
     }
 
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
