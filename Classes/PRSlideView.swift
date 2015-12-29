@@ -351,7 +351,7 @@ public class PRSlideView: UIScrollView {
     // MARK: Actions
     
     func pageClicked(page: PRSlideViewPage) {
-        if let delegate = self.delegate as? PRSlideViewDelegate{
+        if let delegate = self.delegate as? PRSlideViewDelegate {
             delegate.slideView?(self, didClickPageAtIndex: self.indexForActualIndex(page.pageIndex!))
         }
     }
