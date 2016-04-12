@@ -89,7 +89,7 @@ public class PRSlideView: UIScrollView {
                     case .Vertical:
                         return Int((newValue.y + height * 0.5) / height)
                     }
-                }()
+                    }()
                 self.currentPageActualIndex = index
             }
         }
@@ -128,10 +128,16 @@ public class PRSlideView: UIScrollView {
         let frame: CGRect = self.rectForPageAtIndex(index)
         let reusablePage: PRSlideViewPage = {
             var reusablePagesForIdentifier = self.reusablePages[identifier]
-            let reusablePage: PRSlideViewPage? = (reusablePagesForIdentifier != nil && !reusablePagesForIdentifier!.isEmpty) ? reusablePagesForIdentifier?.removeLast() : nil
-            reusablePage?.frame = frame
+            let reusablePage: PRSlideViewPage?
+            if reusablePagesForIdentifier != nil && !reusablePagesForIdentifier!.isEmpty {
+                reusablePage = reusablePagesForIdentifier!.removeLast()
+                reusablePage?.frame = frame
+                self.reusablePages[identifier] = reusablePagesForIdentifier!
+            } else {
+                reusablePage = nil
+            }
             return reusablePage
-            }() ?? self.classForIdentifiers[identifier]!.init(frame: frame, identifier: identifier)
+        }() ?? self.classForIdentifiers[identifier]!.init(frame: frame, identifier: identifier)
         reusablePage.pageIndex = index
         return reusablePage
     }
@@ -249,10 +255,11 @@ public class PRSlideView: UIScrollView {
                 let pageIdentifier: String = page.pageIdentifier
                 var pages: [PRSlideViewPage] = self.reusablePages[pageIdentifier] ?? {
                     let pages: [PRSlideViewPage] = [PRSlideViewPage]()
-                    self.reusablePages[pageIdentifier] = pages
                     return pages
-                    }()
+                }()
                 pages.append(page)
+                self.reusablePages[pageIdentifier] = pages
+                
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     page.removeFromSuperview()
                 })
@@ -275,7 +282,7 @@ public class PRSlideView: UIScrollView {
     
     // MARK: Index
     
-    func actualIndexForIndex(index: Int, forward: Bool) -> Int {
+    func actualIndexForIndex(var index: Int, forward: Bool) -> Int {
         if !self.infiniteScrollingEnabled {
             return index
         }
@@ -326,20 +333,20 @@ public class PRSlideView: UIScrollView {
     }
     
     func resizeContent() {
-        let scrollDirection: PRSlideViewScrollDirection = self.scrollDirection
-        let infiniteScrollingEnabled: Bool = self.infiniteScrollingEnabled
-        let numberOfPages: Int = self.numberOfPages
-        let bounds: CGRect = self.bounds
-        let width: CGFloat = CGRectGetWidth(bounds)
-        let height: CGFloat = CGRectGetHeight(bounds)
-        let contentSize: CGSize = CGSize(
-            width: scrollDirection == PRSlideViewScrollDirection.Horizontal ? infiniteScrollingEnabled ? width * CGFloat(numberOfPages) * CGFloat(kPRSlideViewBufferLength) : width * CGFloat(numberOfPages): width,
-            height: scrollDirection == PRSlideViewScrollDirection.Vertical ? infiniteScrollingEnabled ? height * CGFloat(numberOfPages) * CGFloat(kPRSlideViewBufferLength) : height * CGFloat(numberOfPages): height
-        )
-        self.contentSize = contentSize
-        for page: PRSlideViewPage in self.loadedPages {
-            page.frame = self.rectForPageAtIndex(page.pageIndex!)
-        }
+            let scrollDirection: PRSlideViewScrollDirection = self.scrollDirection
+            let infiniteScrollingEnabled: Bool = self.infiniteScrollingEnabled
+            let numberOfPages: Int = self.numberOfPages
+            let bounds: CGRect = self.bounds
+            let width: CGFloat = CGRectGetWidth(bounds)
+            let height: CGFloat = CGRectGetHeight(bounds)
+            let contentSize: CGSize = CGSize(
+                width: scrollDirection == PRSlideViewScrollDirection.Horizontal ? infiniteScrollingEnabled ? width * CGFloat(numberOfPages) * CGFloat(kPRSlideViewBufferLength) : width * CGFloat(numberOfPages): width,
+                height: scrollDirection == PRSlideViewScrollDirection.Vertical ? infiniteScrollingEnabled ? height * CGFloat(numberOfPages) * CGFloat(kPRSlideViewBufferLength) : height * CGFloat(numberOfPages): height
+            )
+            self.contentSize = contentSize
+            for page: PRSlideViewPage in self.loadedPages {
+                page.frame = self.rectForPageAtIndex(page.pageIndex!)
+            }
     }
     
     // MARK: Actions
