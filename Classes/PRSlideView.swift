@@ -212,14 +212,15 @@ public class PRSlideView: UIScrollView {
         }
     }
     
-    func addPagesOfIndexRange(var indexRange: NSRange) {
+    func addPagesOfIndexRange(indexRange: NSRange) {
+        var range = NSMakeRange(0, 0)
         if (!self.infiniteScrollingEnabled) {
-            indexRange = NSIntersectionRange(indexRange, NSMakeRange(0, self.numberOfPages))
+            range = NSIntersectionRange(indexRange, NSMakeRange(0, self.numberOfPages))
         }
-        for pageIndex: Int in indexRange.location ..< NSMaxRange(indexRange) {
+        for pageIndex: Int in range.location ..< NSMaxRange(indexRange) {
             if self.pageAtIndex(pageIndex) == nil {
                 let page: PRSlideViewPage = self.dataSource!.slideView(self, pageAtIndex: self.indexForActualIndex(pageIndex))
-                page.addTarget(self, action: "pageClicked:", forControlEvents: .TouchUpInside)
+                page.addTarget(self, action: #selector(PRSlideView.pageClicked(_:)), forControlEvents: .TouchUpInside)
                 page.pageIndex = pageIndex
                 
                 if self.loadedPages.indexOf(page) == nil {
@@ -245,13 +246,14 @@ public class PRSlideView: UIScrollView {
         }
     }
     
-    func removePagesOutOfIndexRange(var indexRange: NSRange) {
+    func removePagesOutOfIndexRange(indexRange: NSRange) {
+        var range = NSMakeRange(0, 0)
         if !self.infiniteScrollingEnabled {
-            indexRange = NSIntersectionRange(indexRange, NSMakeRange(0, self.numberOfPages))
+            range = NSIntersectionRange(indexRange, NSMakeRange(0, self.numberOfPages))
         }
         self.loadedPages = self.loadedPages.filter { (page: PRSlideViewPage) -> Bool in
             let pageIndex: Int = page.pageIndex!
-            if !NSLocationInRange(pageIndex, indexRange) {
+            if !NSLocationInRange(pageIndex, range) {
                 let pageIdentifier: String = page.pageIdentifier
                 var pages: [PRSlideViewPage] = self.reusablePages[pageIdentifier] ?? {
                     let pages: [PRSlideViewPage] = [PRSlideViewPage]()
@@ -271,7 +273,7 @@ public class PRSlideView: UIScrollView {
     
     func didScrollToPageAtIndex(index: Int) {
         let delegate = self.delegate as? PRSlideViewDelegate
-        if delegate?.respondsToSelector("slideView:didScrollToPageAtIndex:") != nil {
+        if delegate?.respondsToSelector(#selector(PRSlideViewDelegate.slideView(_:didScrollToPageAtIndex:))) != nil {
             delegate?.slideView!(self, didScrollToPageAtIndex: self.indexForActualIndex(index))
         }
         let offset: Int = index == 0 ? 1 : 0
@@ -282,7 +284,7 @@ public class PRSlideView: UIScrollView {
     
     // MARK: Index
     
-    func actualIndexForIndex(var index: Int, forward: Bool) -> Int {
+    func actualIndexForIndex(index: Int, forward: Bool) -> Int {
         if !self.infiniteScrollingEnabled {
             return index
         }
@@ -353,7 +355,7 @@ public class PRSlideView: UIScrollView {
     
     func pageClicked(page: PRSlideViewPage) {
         let delegate = self.delegate as? PRSlideViewDelegate
-        if delegate?.respondsToSelector("slideView:didClickPageAtIndex:") != nil {
+        if delegate?.respondsToSelector(#selector(PRSlideViewDelegate.slideView(_:didClickPageAtIndex:))) != nil {
             delegate?.slideView!(self, didClickPageAtIndex: self.indexForActualIndex(page.pageIndex!))
         }
     }
