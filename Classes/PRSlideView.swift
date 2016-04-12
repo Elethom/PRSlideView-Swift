@@ -137,7 +137,7 @@ public class PRSlideView: UIScrollView {
                 reusablePage = nil
             }
             return reusablePage
-        }() ?? self.classForIdentifiers[identifier]!(frame: frame, identifier: identifier)
+        }() ?? self.classForIdentifiers[identifier]!.init(frame: frame, identifier: identifier)
         reusablePage.pageIndex = index
         return reusablePage
     }
@@ -222,7 +222,7 @@ public class PRSlideView: UIScrollView {
                 page.addTarget(self, action: "pageClicked:", forControlEvents: .TouchUpInside)
                 page.pageIndex = pageIndex
                 
-                if find(self.loadedPages, page) == nil {
+                if self.loadedPages.indexOf(page) == nil {
                     var inserted: Bool = false
                     for targetIdx: Int in 0 ..< self.loadedPages.count {
                         if self.loadedPages[targetIdx].pageIndex > pageIndex {
@@ -237,7 +237,7 @@ public class PRSlideView: UIScrollView {
                 }
                 
                 page.frame = self.rectForPageAtIndex(pageIndex)
-                page.autoresizingMask = (.FlexibleLeftMargin | .FlexibleWidth | .FlexibleRightMargin | .FlexibleTopMargin | .FlexibleHeight | .FlexibleBottomMargin)
+                page.autoresizingMask = ([.FlexibleLeftMargin, .FlexibleWidth, .FlexibleRightMargin, .FlexibleTopMargin, .FlexibleHeight, .FlexibleBottomMargin])
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.addSubview(page)
                 })
@@ -380,7 +380,7 @@ public class PRSlideView: UIScrollView {
         self.setup()
     }
     
-    public required init(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 }

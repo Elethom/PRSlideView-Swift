@@ -205,6 +205,8 @@
 		93FE23DA1A739FE900B92184 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0730;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Project Rhinestone";
 				TargetAttributes = {
@@ -467,6 +469,7 @@
 				93FE24031A739FE900B92184 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93FE24041A739FE900B92184 /* Build configuration list for PBXNativeTarget "PRSlideViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +478,7 @@
 				93FE24061A739FE900B92184 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

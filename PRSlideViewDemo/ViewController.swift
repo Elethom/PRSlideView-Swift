@@ -72,7 +72,7 @@ class ViewController: UIViewController, PRSlideViewDelegate, PRSlideViewDataSour
     func slideView(slideView: PRSlideView, pageAtIndex index: Int) -> PRSlideViewPage {
         let page: PRAlbumPage = slideView.dequeueReusablePageWithIdentifier(PRAlbumPage.description(), index: index) as! PRAlbumPage
         
-        let imageName: String = self.albumData[index].stringByAppendingPathExtension("jpg")!
+        let imageName: String = (self.albumData[index] as NSString).stringByAppendingPathExtension("jpg")!
         page.coverImageView.image = UIImage(named: imageName)
         
         return page
@@ -84,7 +84,7 @@ class ViewController: UIViewController, PRSlideViewDelegate, PRSlideViewDataSour
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 }
